@@ -1,6 +1,39 @@
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
   <body>
-    <h2>Vanilla JS</h2>
+    <h1>Vanilla JS</h1>
+
+    <h2>Drag and drop HTML5</h2>
+    <p>Arrastra la caja y suéltala en una de las zonas verdes</p>
+    <div
+      id="box"
+      class="box"
+      draggable="true"
+      ondragstart="drag(event)">
+        BOX
+    </div>
+
+    <div class="drop-zone__container" ondragover="allowDrop(event)">
+      <div
+        id="drop-zone1"
+        class="drop-zone__item"
+        ondrop="drop(event)"></div>
+
+      <div
+        id="drop-zone2"
+        class="drop-zone__item"
+        ondrop="drop(event)"></div>
+    </div>
+
+    <h2>Table generator</h2>
+    <div>
+      <input type="button" value="Genera una tabla" onclick="generaTabla()">
+    </div>
+
+    <div class="table_container" id="table_container"></div>
+
+    <script type="text/javascript" src="index.js"></script>
   </body>
 <html>
